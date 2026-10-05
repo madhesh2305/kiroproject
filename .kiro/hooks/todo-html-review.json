@@ -1,0 +1,13 @@
+{
+  "name": "Auto Review on HTML Edit",
+  "version": "1.0.0",
+  "description": "When index.html is saved, ask Kiro to verify structure and links.",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["index.html"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The file index.html was just edited in the To-Do List project. Please review it and make sure: the link to style.css is correct, the script tag pointing to script.js is at the bottom of the body, all element IDs (taskInput, addBtn, taskList, taskCount) are present, and the HTML structure is valid and complete."
+  }
+}

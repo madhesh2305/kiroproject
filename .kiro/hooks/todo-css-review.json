@@ -1,0 +1,13 @@
+{
+  "name": "Auto Review on CSS Edit",
+  "version": "1.0.0",
+  "description": "When style.css is saved, ask Kiro to check for styling issues.",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["style.css"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The file style.css was just edited in the To-Do List project. Please review it for any CSS issues. Check that the layout is still responsive for mobile and desktop, the completed task strikethrough style works, the delete button and checkbox are properly styled, and no styles are broken or missing."
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Auto Review on JS Edit",
+  "version": "1.0.0",
+  "description": "When script.js is saved, ask Kiro to review it for errors or improvements.",
+  "when": {
+    "type": "fileEdited",
+    "patterns": ["script.js"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "The file script.js was just edited in the To-Do List project. Please review it for any JavaScript errors, logic bugs, or improvements. Check that localStorage works correctly, all event listeners are properly attached, and all functions (addTask, deleteTask, toggleTask, renderTasks, updateCount) are working as expected."
+  }
+}

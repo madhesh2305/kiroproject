@@ -1,0 +1,13 @@
+{
+  "name": "New File Alert",
+  "version": "1.0.0",
+  "description": "When a new file is created in the project, remind Kiro to check if it needs to be linked in index.html.",
+  "when": {
+    "type": "fileCreated",
+    "patterns": ["*.js", "*.css", "*.html"]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A new file was just created in the To-Do List project. Please check if this new file needs to be linked or referenced inside index.html (for example a new .css file needs a link tag, or a new .js file needs a script tag). If yes, suggest the exact line to add."
+  }
+}
